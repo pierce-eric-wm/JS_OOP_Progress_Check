@@ -92,7 +92,7 @@ earth.prototype.constructor = earth;
 earth.prototype.displayPlanet = function() {
     document.write("<input type='text' size='500' value=\'" + this.name +
         " has a mass of " + this.mass + "earths a radius of " + this.radius +
-        "mi and an age of " + this.age+ " billion years and its planet location to the sun is "+this.point+ "\'><br><br>");
+        "mi an age of " + this.age+ " billion years and its planet location to the sun is "+this.point+ "\'><br><br>");
 };
 
 function mars(name, mass, radius, age, point,color) {
@@ -115,7 +115,7 @@ mars.prototype.constructor = mars;
 mars.prototype.displayPlanet = function() {
     document.write("<input type='text' size='500' value=\'" + this.name +
         " has a mass of " + this.mass + " earths a radius of " + this.radius +
-        "mi and an age of " + this.age+ " billion years and its planet location to the sun is "+this.point+ " its color is "+this.color+"\'><br><br>");
+        "mi an age of " + this.age+ " billion years and its planet location to the sun is "+this.point+ " and its color is "+this.color+"\'><br><br>");
 };
 function jup(name, mass, radius, age, point,moons) {
     // call the parent constructor
@@ -137,7 +137,7 @@ jup.prototype.constructor = jup;
 jup.prototype.displayPlanet = function() {
     document.write("<input type='text' size='500' value=\'" + this.name +
         " has a mass of " + this.mass + " earths a radius of " + this.radius +
-        "mi and an age of " + this.age+ " billion years and its planet location to the sun is "+this.point+ " it has moons "+this.moons+" many moons"+"\'><br><br>");
+        "mi an age of " + this.age+ " billion years and its planet location to the sun is "+this.point+ " and it has "+this.moons+" moons"+"\'><br><br>");
 };
 
 var nep= {
@@ -156,7 +156,7 @@ var nep= {
 nep.displayPlanet = function() {
     document.write("<input type='text' size='500' value=\'" + nep.name +
         " has a mass of " + nep.mass + " earths a radius of " + nep.radius +
-        "mi and an age of " + nep.age+ " billion years and its planet location to the sun is "+nep.point+ " it has moons "+nep.moons+" many moons and a color of "+
+        "mi an age of " + nep.age+ " billion years and its planet location to the sun is "+nep.point+ " it has "+nep.moons+" moons and its color is "+
         nep.color+"\'><br><br>");
 };
 // override the parent launchPlanet method for a earth
