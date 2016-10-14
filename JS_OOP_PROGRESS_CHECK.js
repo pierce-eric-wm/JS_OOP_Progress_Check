@@ -9,7 +9,7 @@ var Planet = function(name, mass, radius, age) {
 Planet.prototype.displayPlanet = function() {
     document.write("<div class='box'><h3>" + this.name +
         " has a mass of " + this.mass + " earths a radius of " + this.radius +
-        "mi and an age of " + this.age+ " billion years"+ "</h3></div><br>" +
+        "mi and an age of " + this.age+ " billion years"+"."+"</h3></div><br>" +
         "<img src='http://orig04.deviantart.net/ba6d/f/2012/162/1/2/yellow_violet_planet_by_paulinemoss-d532k8u.jpg' width='200' height='200'> <br><br>");
 };
 // encapsulates a method to launch the Planet
@@ -33,7 +33,7 @@ earth.prototype.constructor = earth;
 earth.prototype.displayPlanet = function() {
     document.write("<div class='box'><h3>" + this.name +
         " has a mass of " + this.mass + " earth a radius of " + this.radius +
-        "mi an age of " + this.age+ " billion years and its planet location to the sun is "+this.point+ "</h3></div><br>" +
+        "mi an age of " + this.age+ " billion years and its planet location to the sun is "+this.point+ "."+"</h3></div><br>" +
         "<img src='http://solarviews.com/raw/earth/bluemarblewest.jpg' width='200' height='200'> <br><br>");
 };
 
@@ -57,7 +57,7 @@ mars.prototype.constructor = mars;
 mars.prototype.displayPlanet = function() {
     document.write("<div class='box'><h3>" + this.name +
         " has a mass of " + this.mass + " earths a radius of " + this.radius +
-        "mi an age of " + this.age+ " billion years its planet location to the sun is "+this.point+ " and its color is "+this.color+"</h3></div><br>" +
+        "mi an age of " + this.age+ " billion years its planet location to the sun is "+this.point+ " and its color is "+this.color+"."+"</h3></div><br>" +
         "<img src='https://upload.wikimedia.org/wikipedia/commons/5/58/Mars_23_aug_2003_hubble.jpg' width='200' height='200'> <br><br>");
 };
 function jup(name, mass, radius, age, point,moons) {
@@ -80,7 +80,7 @@ jup.prototype.constructor = jup;
 jup.prototype.displayPlanet = function() {
     document.write("<div class='box'><h3>" + this.name +
         " has a mass of " + this.mass + " earths a radius of " + this.radius +
-        "mi an age of " + this.age+ " billion years its planet location to the sun is "+this.point+ " and it has "+this.moons+" moons"+"</h3></div><br>" +
+        "mi an age of " + this.age+ " billion years its planet location to the sun is "+this.point+ " and it has "+this.moons+" moons."+"</h3></div><br>" +
         "<img src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg' width='200' height='200'><br> <br>");
 };
 
@@ -101,7 +101,7 @@ nep.displayPlanet = function() {
     document.write("<div class='box'><h3>" + nep.name +
         " has a mass of " + nep.mass + " earths a radius of " + nep.radius +
         "mi an age of " + nep.age+ " billion years its planet location to the sun is "+nep.point+ " it has "+nep.moons+" moons and its color is "+
-        nep.color+"</h3></div><br>" +
+        nep.color+"."+"</h3></div><br>" +
         "<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg' width='200' height='200'><br> <br>");
 };
 // override the parent launchPlanet method for a earth
