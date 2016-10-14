@@ -1,64 +1,4 @@
-////base variable
-//var planet = function(name, radius, mass, velocity) {
-//    this.name = name;
-//    this.radius=radius
-//    this.mass = mass;
-//    this.velocity = velocity;
-//
-//};
-//// encapsulates a method to display any planet
-//planet.prototype.displayPlanet = function() {
-//    document.write("<input type='text' size='100' value=\'" + this.name +
-//        ": name = " + this.radus + " " + this.mass +
-//        ", velocity" + this.velocity  + "\'><br><br>");
-//};
-//
-//// encapsulates a method to show new planet
-//function earth(name, radius, mass, velocity, location) {
-//    // call the parent constructor
-//    // this will set the inherited properties for the subclass
-//    planet.call(this, name, radius, mass, velocity);
-//    // set the subclass specific properties
-//    this.location = location;
-//}
-//// create the subclass prototype that inherits from
-//// the parent prototype by cloning it
-//
-//earth.prototype = Object.create(planet.prototype);
-//
-//// set the constructor property of the new prototype to point to
-//// the subclass constructor
-//
-//earth.prototype.constructor = earth;
-//
-//// override the parent displayPlanet method for a Earth
-//earth.prototype.displayPlanet = function() {
-//    document.write("<input type='text' size='100' value=\'" + this.name +
-//        ": has the a radius of " + this.radius + "mi " + " its mass is "+this.mass +
-//        "earths" + "a velocity of  "+this.velocity+"km/s"+ " and its location in the solar system is " +
-//        this.location +"\'><br><br>");
-//};
-//
-//function main() {
-//
-//    var Earth = new earth("Earth", 3, 958.8, 5.97237 * 10 ^ 24, 29.78, 3);
-//    earth.displayPlanet();
-//
-//
-//
-//
-//
-//
-//    // instantiate an array to hold Planets
-////    var planetArray = [];
-////    // populating the Planet array with objects and subclass objects
-////    planetArray[0] = new planet("Name", 100 , 1000, 10000);
-////    planetArray[0] = new planet("Earth", 3,958.8 , 	5.97237×1024, 29.78,3);
-////// philosophically exercise the methods of the objects
-////    for (var i = 0; i < planetArray.length; i++) {
-////        planetArray.displayPlanet();
-//
-//}//Planet constructor, this will become the prototype for th parent class of all //Planets
+//Planet constructor, this will become the prototype for th parent class of all //Planets
 var Planet = function(name, mass, radius, age) {
     this.name = name;
     this.mass = mass;
@@ -67,9 +7,10 @@ var Planet = function(name, mass, radius, age) {
 };
 // encapsulates a method to display any Planet
 Planet.prototype.displayPlanet = function() {
-    document.write("<input type='text' size='500' value=\'" + this.name +
-        " has a mass of " + this.mass + "earths a radius of " + this.radius +
-        "mi and an age of " + this.age+ " billion years"+ "\'><br><br>");
+    document.write("<div class='box'><h3>" + this.name +
+        " has a mass of " + this.mass + " earths a radius of " + this.radius +
+        "mi and an age of " + this.age+ " billion years"+ "</h3></div><br>" +
+        "<img src='http://orig04.deviantart.net/ba6d/f/2012/162/1/2/yellow_violet_planet_by_paulinemoss-d532k8u.jpg' width='200' height='200'> <br><br>");
 };
 // encapsulates a method to launch the Planet
 // define a constructor for a subclass of Planet
@@ -90,9 +31,10 @@ earth.prototype.constructor = earth;
 
 // override the parent displayPlanet method for a earth
 earth.prototype.displayPlanet = function() {
-    document.write("<input type='text' size='500' value=\'" + this.name +
-        " has a mass of " + this.mass + "earths a radius of " + this.radius +
-        "mi an age of " + this.age+ " billion years and its planet location to the sun is "+this.point+ "\'><br><br>");
+    document.write("<div class='box'><h3>" + this.name +
+        " has a mass of " + this.mass + " earth a radius of " + this.radius +
+        "mi an age of " + this.age+ " billion years and its planet location to the sun is "+this.point+ "</h3></div><br>" +
+        "<img src='http://solarviews.com/raw/earth/bluemarblewest.jpg' width='200' height='200'> <br><br>");
 };
 
 function mars(name, mass, radius, age, point,color) {
@@ -113,9 +55,10 @@ mars.prototype.constructor = mars;
 
 // override the parent displayPlanet method for a mars
 mars.prototype.displayPlanet = function() {
-    document.write("<input type='text' size='500' value=\'" + this.name +
+    document.write("<div class='box'><h3>" + this.name +
         " has a mass of " + this.mass + " earths a radius of " + this.radius +
-        "mi an age of " + this.age+ " billion years its planet location to the sun is "+this.point+ " and its color is "+this.color+"\'><br><br>");
+        "mi an age of " + this.age+ " billion years its planet location to the sun is "+this.point+ " and its color is "+this.color+"</h3></div><br>" +
+        "<img src='https://upload.wikimedia.org/wikipedia/commons/5/58/Mars_23_aug_2003_hubble.jpg' width='200' height='200'> <br><br>");
 };
 function jup(name, mass, radius, age, point,moons) {
     // call the parent constructor
@@ -135,9 +78,10 @@ jup.prototype.constructor = jup;
 
 // override the parent displayPlanet method for a jup
 jup.prototype.displayPlanet = function() {
-    document.write("<input type='text' size='500' value=\'" + this.name +
+    document.write("<div class='box'><h3>" + this.name +
         " has a mass of " + this.mass + " earths a radius of " + this.radius +
-        "mi an age of " + this.age+ " billion years its planet location to the sun is "+this.point+ " and it has "+this.moons+" moons"+"\'><br><br>");
+        "mi an age of " + this.age+ " billion years its planet location to the sun is "+this.point+ " and it has "+this.moons+" moons"+"</h3></div><br>" +
+        "<img src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg' width='200' height='200'><br> <br>");
 };
 
 var nep= {
@@ -154,10 +98,11 @@ var nep= {
 
 // override the parent displayPlanet method for a nep
 nep.displayPlanet = function() {
-    document.write("<input type='text' size='500' value=\'" + nep.name +
+    document.write("<div class='box'><h3>" + nep.name +
         " has a mass of " + nep.mass + " earths a radius of " + nep.radius +
         "mi an age of " + nep.age+ " billion years its planet location to the sun is "+nep.point+ " it has "+nep.moons+" moons and its color is "+
-        nep.color+"\'><br><br>");
+        nep.color+"</h3></div><br>" +
+        "<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg' width='200' height='200'><br> <br>");
 };
 // override the parent launchPlanet method for a earth
 
